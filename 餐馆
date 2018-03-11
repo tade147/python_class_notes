@@ -13,10 +13,23 @@ class Restaurant():
         """指出该餐馆正在营业"""
         print(self.name + "正在营业。")
 
-the_restaurant = Restaurant("沙县小吃", '卖小吃')
-print("这是" + the_restaurant.name + "，这是一家" + the_restaurant.cuisine_type + "的餐馆")
+    def set_number_served(self, number_served):
+        """设置用餐人数"""
+        self.number_served = number_served
+        print("已经有" + str(self.number_served) + "人在这里吃过饭了")
 
-the_restaurant.describe_restaurant()
-the_restaurant.open_restaurant()
+    def increment_number_served(self, increment):
+        """设置用餐人数增量"""
+        self.number_served += increment
+        print("这家餐馆可能的就餐人数为" + str(self.number_served) + "人。")
+
+the_restaurant = Restaurant("沙县小吃", '卖小吃')
+
+the_restaurant.set_number_served(23)
+the_restaurant.increment_number_served(30)
+
+
+
+
 
         
