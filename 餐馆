@@ -1,0 +1,22 @@
+class Restaurant():
+    """创建一个关于餐馆的类"""
+    def __init__(self, name, cuisine_type):
+        """创建餐馆属性"""
+        self.name = name
+        self.cuisine_type = cuisine_type
+
+    def describe_restaurant(self):
+        """描述餐馆"""
+        print("这个餐馆的名字是" + self.name.title() + "，这是一家" + self.cuisine_type.title() + "的餐馆。")
+
+    def open_restaurant(self):
+        """指出该餐馆正在营业"""
+        print(self.name + "正在营业。")
+
+the_restaurant = Restaurant("沙县小吃", '卖小吃')
+print("这是" + the_restaurant.name + "，这是一家" + the_restaurant.cuisine_type + "的餐馆")
+
+the_restaurant.describe_restaurant()
+the_restaurant.open_restaurant()
+
+        
