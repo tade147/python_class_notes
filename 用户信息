@@ -1,0 +1,26 @@
+class User():
+    """创建一个关于使用者的类"""
+
+    def __init__(self, first_name, last_name, location, year):
+        """存储用户的一些基本信息"""
+        self.first_name = first_name
+        self.last_name = last_name
+        self.location = location
+        self.year = year
+
+    def describe_user(self):
+        """打印用户信息摘要"""
+        print("这是" + self.first_name + self.last_name + ".他是" + self.location + "人，成为网站用户" + str(self.year) + "年了。")
+
+    def greet_user(self):
+        """向用户发出问候"""
+        print(self.first_name + self.last_name + "，你好，欢迎使用python。")
+
+wumin = User('吴', '敏',  '湖南岳阳', 0.5)
+zhanghong = User('张', '鸿', '江西宜春', 0)
+wumin.describe_user()
+wumin.greet_user()
+zhanghong.describe_user()
+zhanghong.greet_user()
+
+    
