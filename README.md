@@ -151,5 +151,7 @@ my_used_car.read_odometer()
 my_used_car.increment_odometer(100)
 my_used_car.read_odometer()
 
+3.继承
+3.1 子类的方法 __init__()
 
 
