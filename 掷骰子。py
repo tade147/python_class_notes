@@ -1,0 +1,7 @@
+from random import randint
+def roll_die(t,i):
+    for i in range(0,10):
+        x = randint(1, t)
+        print(x)
+
+roll_die(10,10)
