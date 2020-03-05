@@ -28,18 +28,26 @@ class User():
         self.login_attempts = 0
         print("该用户的登陆次数已重置")
 
-class Admin(User):
-    """管理员"""
-    def __init__(self, first_name, last_name, location, year):
-        super().__init__(first_name, last_name, location, year)
-        self.privileges = ["添加文件", "删除文件", "禁止用户"]
-
+class Privileges():
+    """存储特权"""
+    def __init__(self, privileges = ["添加文件", "删除文件", "禁止用户"]):
+        """特权"""
+        self.privileges = privileges
+        
     def show_privileges(self):
         """显示管理员权利"""
         print("管理员有以下权利")
         for privileges in self.privileges:
-            print(privileges)
+            print(privileges)    
+
+class Admin(User):
+    """管理员"""
+    def __init__(self, first_name, last_name, location, year):
+        super().__init__(first_name, last_name, location, year)
+        self.privileges = Privileges()
 
 my_admin = Admin("吴", "敏", "宜春", 2)
 
-my_admin.show_privileges()
+
+my_admin.privileges.show_privileges()
+
